@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/* FONTES */
+
+@font-face {
+    font-family: 'tangerine';
+    src: url(../fonts/Tangerine/Tangerine-Regular.ttf)
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+/* VARIÁVEIS CSS */
+
+:root {
+    --font-roboto: 'roboto', Arial, Helvetica, sans-serif;
+    --font-tangerine: 'tangerine', sans-serif;
+    
+    --primary: #0c71c3;
+    --secondary: #0c4a7c;
+    --cor3: #c2d3e5;
+    --subtitulo: #778899;
+    --bg-second: #f2edff;
+    --bg-hover-itens-menu: #d3d3d38a;
+    --white: #fff; 
+    --black: #000;
+}
+
+/* RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    font-family: var(--font-roboto);
+}
+
+/* BODY */
+
+html, body {
+    background-color: var(--bg-second);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    transition: .3s;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--secondary);
+    box-shadow: 0 0 .625rem #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.container_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dhara_logo {
+    font-family: var(--font-tangerine);
+    font-size: 40px;
+    color: var(--white);
+}
+
+/* SECTION CONTATO */
+
+#contato {
+    min-height: 100vh;
+    background-color: var(--bg-second);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: var(--primary);
+}
+
+form {
+    background-color: var(--white);
+    border: 1px solid var(--cor3);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #00000033;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: none;
+}   
+
+input {
+    outline: none;
+    border: none;
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(211, 211, 211, 0.199);
+    padding: 5px;
+}
+
+input:focus {
+    border: 1px solid var(--primary);
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    border: 1px solid var(--cor3);
+    background-color: rgba(211, 211, 211, 0.199);
+    width: 100%;
+    padding: 5px;
+}
+
+textarea:focus {
+    border: 1px solid var(--primary);
+}
+
+form button {
+    min-width: 100%;
+    outline: none;
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: var(--secondary);
+}
+
+.container_sociais {
+    min-width: 100%;
+    border-top: 1px solid var(--cor3);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.paragrafo_sociais {
+    text-align: center;
+    color: var(--subtitulo);
+    font-size: 16px;
+}
+
+.container_icons_sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.sociais {
+    font-size: 25px;
+    color: var(--primary);
+    transition: .3s ease;
+}
+
+.sociais:hover {
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: var(--secondary);
+    color: var(--bg-second);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    color: var(--bg-second);
+}
+
+#dev_gilberto {
+    width: 150px;
+    height: auto;
+}
+
+#dev_gilberto:hover {
+    border-bottom: 1px solid var(--primary);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 680px) {
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}

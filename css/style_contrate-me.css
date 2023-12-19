@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/* FONTES */
+
+@font-face {
+    font-family: 'tangerine';
+    src: url(../fonts/Tangerine/Tangerine-Regular.ttf)
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+/* VARIÁVEIS CSS */
+  
+:root {
+    --font-roboto: 'roboto', Arial, Helvetica, sans-serif;
+    --font-tangerine: 'tangerine', sans-serif;
+    
+    --primary: #0c71c3;
+    --secondary: #0c4a7c;
+    --cor3: #c2d3e5;
+    --subtitulo: #778899;
+    --bg-second: #f2edff;
+    --bg-hover-itens-menu: #d3d3d38a;
+    --white: #fff; 
+    --black: #000;
+    }
+
+/* RESET CSS */
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    font-family: var(--font-roboto);
+}
+
+/* BODY */
+
+html, body {
+    background-color: var(--bg-second);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    transition: .3s;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--secondary);
+    box-shadow: 0 0 .625rem #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.container_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dhara_logo {
+    font-family: var(--font-tangerine);
+    font-size: 40px;
+    color: var(--white);
+}
+
+/* SECTION COMPETÊNCIAS */
+
+#competencias {
+    min-height: 100vh;
+    background-color: var(--bg-second);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.lista_competencias {
+    columns: 2;
+    column-gap: 100px;
+}
+
+.lista_competencias li {
+    color: var(--secondary);
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.lista_competencias li::before {
+    content: '+ ';
+    color: var(--primary);
+}
+
+.container_btn_contato_curriculo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#btn_curriculo {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--bg-second);
+    background-color: var(--primary);
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+
+#btn_curriculo:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn_contato {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--bg-second);
+    background-color: var(--primary);
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+
+.btn_contato:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: var(--secondary);
+    color: var(--bg-second);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p{
+    font-size: 12px;
+    color: var(--bg-second);
+}
+
+#dev_gilberto {
+    width: 150px;
+    height: auto;
+}
+
+#dev_gilberto:hover {
+    border-bottom: 1px solid var(--primary);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 680px) {
+    
+    .lista_competencias {
+        columns: 1;
+        column-gap: 100px;
+    }
+
+    .container_btn_contato_curriculo {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,495 @@
+@charset "UTF-8";
+
+/* FONTES */
+
+@font-face {
+    font-family: 'tangerine';
+    src: url(../fonts/Tangerine/Tangerine-Regular.ttf)
+    format('truetype');
+  }
+
+  @font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  }
+
+  /* VARIÁVEIS CSS */
+  
+  :root {
+      --font-roboto: 'roboto', Arial, Helvetica, sans-serif;
+      --font-tangerine: 'tangerine', sans-serif;
+      
+      --primary: #0c71c3;
+      --secondary: #0c4a7c;
+      --cor3: #c2d3e5;
+      --subtitulo: #778899;
+      --bg-second: #f2edff;
+      --bg-hover-itens-menu: #d3d3d38a;
+      --white: #fff; 
+      --black: #000;
+    }
+
+    /* RESET CSS */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style-type: none;
+        scroll-behavior: smooth;
+        font-family: var(--font-roboto);
+    }
+
+/* BODY */
+
+html, body {
+    background-color: var(--bg-second);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    transition: .3s;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--secondary);
+    box-shadow: 0 0 .625rem #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.container_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dhara_logo {
+    font-family: var(--font-tangerine);
+    font-size: 40px;
+    color: var(--white);
+}
+
+.container_links_header_desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_links_header_desktop li {
+    margin: 0 15px;
+}
+
+.container_links_header_desktop li a {
+    color: var(--white);
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.container_links_header_desktop li a:hover {
+    background-color: var(--primary);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.contrate_me {
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.contrate_me:hover {
+    color: var(--white);
+    background-color: var(--primary);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.menu_hamburguer {
+    display: none;
+    color: var(--white);
+    font-size: 30px;
+}
+
+.menu_hamburguer:hover {
+    cursor: pointer;
+}
+
+.container_menu_mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--primary);
+}
+
+.icon_close_menu_mobile {
+    color: var(--white);
+    font-size: 30px;
+}
+
+.icon_close_menu_mobile:hover {
+    cursor: pointer;
+}
+
+.container_menu_mobile li {
+    margin: 20px 0;
+}
+
+.container_menu_mobile li a {
+    color: var(--white);
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.container_menu_mobile li a:hover {
+    /* background-color: var(--primary); */
+    text-decoration: underline;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* SECTION HOME */
+
+#home {
+    height: 100vh;
+    background-image: url(../img/bg_destaques.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.overlay_home{
+    background-color: #0000004b;
+    background-image: linear-gradient(to left,  #0c71c31a, #0c71c3);
+    width: 100%;
+    height: 100%;
+}
+
+.container_dhara_home {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.biomedica {
+    font-size: 20px;
+    color: var(--cor3);
+    text-shadow: 1px 1px 0px #1d1d1d;
+}
+
+.dhara {
+    font-family: var(--font-tangerine), Arial, Helvetica, sans-serif;
+    text-shadow: -5px 8px 10px #000000da;
+    font-size: 80px;
+    font-weight: 400;
+    color: var(--white);
+    text-align: left;
+}
+
+.mestra_especialista {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.crbm {
+    color: #181818;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* SECTION SOBRE MIM */
+
+#sobre_mim {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+#sobre_mim h2 {
+    color: #181818;
+    text-align: center;
+}
+
+.img_dhara_perfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+}
+
+.palavras_destacadas {
+    color: var(--secondary);
+}
+
+.paragrafo_sobre_mim {
+    max-width: 800px;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+/* SECTION FORMAÇÃO */
+
+#formacao {
+    min-height: 100vh;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+#formacao h2 {
+    color: #ecf0f1;
+    text-align: center;
+}
+
+.container_cards_formacao {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 40px;
+}
+
+.cards_formacao {
+    background-color: var(--primary);
+    box-shadow: 5px 8px 10px #000000a1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cards_formacao::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-image: url('../img/medalha.png');
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+  }
+  
+.logo_universidade {
+    width: 70px;
+    height: 70px;
+}
+
+.uninter {
+    width: 70px;
+    height: 70px;
+    background-color: var(--bg-second);
+}
+
+.nome_universidade {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.curso {
+    color: var(--bg-second);
+}
+
+/* SECTION DESTAQUES */
+
+#destaques {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#destaques h2 {
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.container_destaques {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    max-width: 1000px;
+}
+
+.container_img_text {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    min-width: 100%;
+}
+
+.texto_direita {
+    text-align: right;
+}
+
+.texto_destaques h3 {
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.texto_destaques p {
+    color: #181818;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.links_livro {
+    color: var(--secondary);
+    background-color: var(--primary);
+    color: var(--bg-second);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.links_livro:hover {
+    text-decoration: underline;
+}
+
+#destaques img {
+    border: 1px solid var(--primary);
+    max-width: 300px;
+    height: auto;
+}
+
+#destaques video {
+    border: 1px solid var(--primary);
+    max-width: 400px;
+    height: auto;
+}
+
+/* SECTION CONTATO */
+
+#contato {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary) ;
+    color: var(--bg-second);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 5px 8px 10px #00000067;
+}
+
+.btn_contato:hover {
+    text-decoration: underline;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: var(--secondary);
+    color: var(--bg-second);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p{
+    font-size: 12px;
+    color: var(--bg-second);
+}
+
+.container_links_footer {
+    columns: 2;
+    gap: 40px;
+    text-align: left;
+}
+
+.container_links_footer a {
+    color: var(--bg-second);
+    font-size: 12px;
+}
+
+.container_links_footer a:hover {
+    text-decoration: underline;
+}
+
+#dev_gilberto {
+    width: 150px;
+    height: auto;
+}
+
+#dev_gilberto:hover {
+    border-bottom: 1px solid var(--primary);
+}
+
+#arrowUp {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: var(--primary);
+    box-shadow: 5px 8px 10px #000000b7;
+    padding: 5px;
+    transition: .3s;
+}
+
+#arrowUp:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

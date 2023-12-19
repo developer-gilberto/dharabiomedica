@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 980px) {
+
+    .container_links_header_desktop {
+        display: none;
+    }
+
+    .menu_hamburguer {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .container_destaques {
+        gap: 40px;
+    }
+    
+    .container_img_text {
+        padding: 25px;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 100%;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .texto_direita {
+        text-align: left;
+    }
+
+    .texto_destaques h3 {
+        text-align: left;
+    }
+
+    .container_btn_links_livro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .links_livro {
+        margin: 15px;
+        font-size: 14px;
+    }
+
+    #destaques img {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .biomedica {
+        font-size: 17px;
+    }
+    
+    .dhara {
+        font-size: 45px;
+    }
+    
+    .mestra_especialista {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    .crbm {
+        font-size: 12px;
+    }
+
+    .img_dhara_perfil {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cards_formacao {
+        max-width: 250px;
+        padding: 20px;
+    }
+
+    .descricao_curso {
+        text-align: left;
+    }
+
+    #destaques video {
+        max-width: 280px;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
